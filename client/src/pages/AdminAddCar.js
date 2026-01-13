@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
+import API_BASE from "../api";
+
 import "../styles/AdminEditCar.css"; 
 
 const AdminAddCar = () => {
@@ -52,8 +54,7 @@ const AdminAddCar = () => {
     formData.append("image", imageFile);
 
     try {
-      const response = await fetch(
-        "https://mycarrental.xo.je/car_rental_api/addCar.php",
+      const response = await fetch(`${API_BASE}/addCar.php`,
         {
           method: "POST",
           body: formData,

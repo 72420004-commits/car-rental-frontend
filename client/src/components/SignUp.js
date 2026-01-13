@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SignUp.css";
+import API_BASE from "../api";
+
 import registerImg from "../assets/register.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -27,8 +29,7 @@ const SignUp = () => {
     }
 
     try {
-      const res = await fetch(
-        "https://mycarrental.xo.je/car_rental_api/register.php",
+      const res = await fetch(`${API_BASE}/register.php`, 
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

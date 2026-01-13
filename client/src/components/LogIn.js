@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/LogIn.css";
+import API_BASE from "../api";
+
 import loginImg from "../assets/login.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -13,14 +15,12 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(
-        "https://mycarrental.xo.je/car_rental_api/login.php",
-        {
+           const res = await fetch(`${API_BASE}/login.php`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
-        }
-      );
+        });
+
 
       const data = await res.json();
 

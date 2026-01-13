@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AdminLayout from "../components/AdminLayout";
+import API_BASE from "../api";
+
 import "../styles/AdminBookings.css";
 
 const AdminBookings = () => {
@@ -26,9 +28,8 @@ const AdminBookings = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await fetch(
-          "https://mycarrental.xo.je/car_rental_api/getAllBookings.php"
-        );
+        const res = await fetch(`${API_BASE}/getAllBookings.php`);
+
         const data = await res.json();
 
         if (data.status === "success") {
@@ -50,9 +51,8 @@ const AdminBookings = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch(
-          "https://mycarrental.xo.je/car_rental_api/getReviews.php"
-        );
+        const res = await fetch(`${API_BASE}/getReviews.php`);
+
         const data = await res.json();
 
         if (data.status === "success") {

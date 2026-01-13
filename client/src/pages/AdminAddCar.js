@@ -53,7 +53,7 @@ const AdminAddCar = () => {
 
     try {
       const response = await fetch(
-        "http://localhost/car_rental_api/addCar.php",
+        "https://mycarrental.xo.je/car_rental_api/addCar.php",
         {
           method: "POST",
           body: formData,

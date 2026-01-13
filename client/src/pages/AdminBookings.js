@@ -27,7 +27,7 @@ const AdminBookings = () => {
     const fetchBookings = async () => {
       try {
         const res = await fetch(
-          "http://localhost/car_rental_api/getAllBookings.php"
+          "https://mycarrental.xo.je/car_rental_api/getAllBookings.php"
         );
         const data = await res.json();
 
@@ -51,7 +51,7 @@ const AdminBookings = () => {
     const fetchReviews = async () => {
       try {
         const res = await fetch(
-          "http://localhost/car_rental_api/getReviews.php"
+          "https://mycarrental.xo.je/car_rental_api/getReviews.php"
         );
         const data = await res.json();
 

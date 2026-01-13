@@ -27,16 +27,19 @@ const SignUp = () => {
     }
 
     try {
-      const res = await fetch("http://localhost/car_rental_api/register.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          password
-        }),
-      });
+      const res = await fetch(
+        "https://mycarrental.xo.je/car_rental_api/register.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            password
+          }),
+        }
+      );
 
       const data = await res.json();
 
@@ -52,7 +55,6 @@ const SignUp = () => {
 
   return (
     <div className="register-container">
-
       {/* LEFT IMAGE */}
       <div
         className="left-side"
@@ -61,7 +63,6 @@ const SignUp = () => {
 
       {/* RIGHT FORM */}
       <div className="right-side">
-
         {/* Back Button */}
         <p className="back-link" onClick={() => navigate("/")}>
           ← Back to Home
@@ -73,11 +74,41 @@ const SignUp = () => {
           {message && <p className="error-msg">{message}</p>}
 
           <form onSubmit={handleRegister}>
-            <input type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
-            <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-            <input type="password" placeholder="Confirm Password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required />
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirm}
+              onChange={(e) => setConfirm(e.target.value)}
+              required
+            />
 
             <button type="submit">Register</button>
           </form>
@@ -86,10 +117,9 @@ const SignUp = () => {
           <p className="login-link">
             Already have an account?
             <span className="login-text" onClick={() => navigate("/login")}>
-            Login
+              Login
             </span>
           </p>
-
         </div>
       </div>
     </div>

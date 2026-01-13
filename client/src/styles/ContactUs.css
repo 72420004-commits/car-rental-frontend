@@ -1,0 +1,188 @@
+/* ===============================
+   CONTACT PAGE ROOT (SCOPE)
+================================ */
+.contact-container {
+  width: 100%;
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.contact-container .contact-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #222;
+}
+
+.contact-container .contact-sub {
+  color: #555;
+  max-width: 650px;
+  margin: 10px auto 40px;
+  font-size: 18px;
+}
+
+/* ===============================
+   INFO CARDS
+================================ */
+.contact-container .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contact-container .info-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  width: 240px;
+  text-align: center;
+  border-top: 4px solid orange;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.contact-container .info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.contact-container .info-icon {
+  color: orange;
+  font-size: 38px !important;
+  margin-bottom: 8px;
+}
+
+.contact-container .info-card h3 {
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.contact-container .info-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ===============================
+   SIDE-BY-SIDE LAYOUT
+================================ */
+.contact-container .contact-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 8%;
+  margin-top: 20px;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.contact-container .contact-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container .contact-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   FORM CARD
+================================ */
+.contact-container .form-card {
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-left: 5px solid orange;
+}
+
+.contact-container .side-form {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-container .form-card h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* ===============================
+   INPUTS & TEXTAREA (ISOLATED)
+================================ */
+.contact-container .side-form input,
+.contact-container .side-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* TEXTAREA FIX */
+.contact-container .side-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* FOCUS STATE */
+.contact-container .side-form input:focus,
+.contact-container .side-form textarea:focus {
+  border-color: orange;
+  box-shadow: 0 0 4px rgba(255, 165, 0, 0.6);
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.contact-container .side-form button {
+  width: 100%;
+  padding: 14px;
+  background: orange;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-container .side-form button:hover {
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-row {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .side-form {
+    text-align: center;
+  }
+
+  .contact-image {
+    max-width: 100%;
+  }
+}
+

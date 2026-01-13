@@ -1,0 +1,154 @@
+/* ------------------------------
+   HOME CARS SECTION
+------------------------------ */
+
+.home-cars-section {
+  text-align: center;
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+  isolation: isolate;
+}
+
+/* Section number */
+.home-section-number {
+  font-size: 55px;
+  font-weight: 700;
+  color: #FFA500;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.home-cars-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 10px;
+}
+
+.home-cars-title span {
+  color: orange;
+}
+
+.home-cars-intro {
+  max-width: 750px;
+  margin: 10px auto 50px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* GRID */
+.home-cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ------------------------------
+   CAR CARD
+------------------------------ */
+
+.home-car-card {
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  /* gold glow */
+  box-shadow: 0 0 6px rgba(218, 165, 32, 0.15),
+              0 0 18px rgba(218, 165, 32, 0.10),
+              0 0 30px rgba(218, 165, 32, 0.08);
+  border: 2px solid rgba(218, 165, 32, 0.18);
+}
+
+.home-car-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.35),
+              0 0 25px rgba(218, 165, 32, 0.28),
+              0 0 45px rgba(218, 165, 32, 0.25);
+  border: 2px solid rgba(218, 165, 32, 0.45);
+}
+
+/* Image */
+.home-car-img {
+  width: 100%;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.home-car-card:hover .home-car-img {
+  transform: scale(1.04);
+}
+
+/* Text */
+.home-car-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+}
+
+.home-car-card p {
+  margin: 0;
+  color: #666 !important;
+}
+
+/* Button */
+.home-view-btn {
+  background-color: orange;
+  color: white !important;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-view-btn:hover {
+  background-color: orange;
+  transform: translateY(-2px);
+}
+
+/* VIEW MORE CARD */
+.home-view-more {
+  background-color: #f3f3f3;
+  border: 2px dashed #aaa;
+}
+
+.home-more-btn {
+  background-color: #333 !important;
+}
+
+.home-more-btn:hover {
+  background-color: #111 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-car-img {
+    height: 160px !important;
+  }
+
+  .home-section-number {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section-number {
+    font-size: 38px;
+  }
+}
+
+

@@ -1,0 +1,189 @@
+/* ============================
+   ADMIN USERS PAGE
+============================ */
+
+.admin-users-container {
+  padding: 30px;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.admin-users-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* SUBTITLE */
+.admin-users-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* LOADING / EMPTY */
+.admin-users-loading,
+.admin-users-empty {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* ============================
+   TABLE
+============================ */
+
+.admin-users-table-wrapper {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.admin-users-table thead {
+  background: #ff9800;
+}
+
+.admin-users-table th {
+  padding: 14px;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-users-table td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+/* ROW HOVER */
+.admin-users-table tbody tr:hover {
+  background: #fff4e5;
+}
+
+/* ============================
+   STATUS / ROLE SELECT
+============================ */
+
+.admin-users-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ============================
+   ACTION BUTTONS
+============================ */
+
+.admin-users-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+/* BLOCK BUTTON */
+.admin-users-btn.block {
+  background: #ff4d4d;
+  color: white;
+}
+
+.admin-users-btn.block:hover {
+  background: #e60000;
+}
+
+/* ACTIVATE BUTTON */
+.admin-users-btn.activate {
+  background: #4caf50;
+  color: white;
+}
+
+.admin-users-btn.activate:hover {
+  background: #388e3c;
+}
+/* STATUS BADGES */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 8px;
+}
+
+.status-badge.active {
+  background: #e6f7ec;
+  color: #1e8e3e;
+}
+
+.status-badge.blocked {
+  background: #fdecea;
+  color: #d93025;
+}
+
+.admin-protected {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+}
+
+.admin-users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* SEARCH */
+.admin-users-search input {
+  padding: 10px 14px;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.admin-users-search input:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 6px rgba(255, 152, 0, 0.3);
+}
+
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 768px) {
+  .admin-users-container {
+    padding: 20px;
+  }
+
+  .admin-users-title {
+    font-size: 24px;
+  }
+
+  .admin-users-table {
+    font-size: 13px;
+  }
+}

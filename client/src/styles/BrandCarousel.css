@@ -1,0 +1,64 @@
+.brand-slider {
+  text-align: center;
+  margin: 70px auto;
+  width: 90%;
+}
+
+/* Row of logos */
+.brand-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.brand-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  background-color: #f4f4f8;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlight active image */
+.brand-img.highlight {
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5);
+}
+
+/* Indicator buttons under logos */
+.indicator-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.indicator {
+  width: 18px;
+  height: 18px;
+  background-color: #22243A;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicator.active {
+  background-color: orange;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand-img {
+    width: 80px;
+    height: 80px;
+  }
+  .indicator {
+    width: 14px;
+    height: 14px;
+  }
+}

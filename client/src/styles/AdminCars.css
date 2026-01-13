@@ -1,0 +1,184 @@
+.admin-cars-container {
+  padding: 10px;
+}
+
+.admin-cars-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.admin-cars-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.admin-cars-loading,
+.admin-cars-empty {
+  font-size: 15px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Table wrapper */
+.admin-cars-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+/* Table */
+.admin-cars-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-cars-table th,
+.admin-cars-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.admin-cars-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #444;
+}
+
+.admin-cars-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* Action buttons */
+.admin-cars-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: 0.2s;
+}
+
+.admin-cars-btn.edit {
+  background: #3498db;
+  color: white;
+}
+
+.admin-cars-btn.edit:hover {
+  background: #2980b9;
+}
+
+.admin-cars-btn.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+.admin-cars-btn.delete:hover {
+  background: #c0392b;
+}
+
+.admin-add-btn {
+  background: #ffa500;
+  color: white;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.admin-add-btn:hover {
+  background: #e38f00;
+  transform: translateY(-2px);
+}
+
+.admin-cars-search {
+  width: 300px;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===============================
+   ADMIN TRASH PAGE
+================================ */
+
+/* Trash title color */
+.admin-cars-title {
+  color: #222;
+}
+
+/* Subtitle for trash page */
+.admin-cars-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Trash empty message */
+.admin-cars-empty {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-top: 30px;
+}
+
+/* Trash table row (slightly faded) */
+.admin-cars-table tbody tr {
+  background-color: #fff;
+}
+
+/* Restore button */
+.admin-cars-btn.restore {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.admin-cars-btn.restore:hover {
+  background-color: #27ae60;
+}
+
+/* Back button spacing */
+.admin-add-btn {
+  margin-bottom: 20px;
+}
+
+/* Trash icon button (optional later) */
+.admin-trash-btn {
+  background-color: #444;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.admin-trash-btn:hover {
+  background-color: #222;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-cars-title {
+    font-size: 22px;
+  }
+
+  .admin-cars-table {
+    font-size: 12px;
+  }
+}

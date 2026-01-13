@@ -1,0 +1,109 @@
+.hero-container {
+  width: 100%;
+  padding: 40px 20px 40px;   /* Reduced whitespace */
+  text-align: center;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #22243A;
+  margin-bottom: 5px;
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px; /* Reduced spacing */
+}
+
+/* IMAGE WRAPPER */
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto 20px; /* Reduced spacing above image */
+}
+
+/* CAR IMAGE */
+.hero-img {
+  width: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* SOFT SHADOW */
+.car-shadow {
+  width: 70%;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  margin: -20px auto 0;
+  filter: blur(10px);
+}
+
+/* BUTTON */
+.hero-btn {
+  background: orange;
+  color: #fff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #f0ca1e;
+  box-shadow: 0 5px 14px rgba(243, 208, 51, 0.863);
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ====================== */
+/*        RESPONSIVE      */
+/* ====================== */
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-img-wrapper {
+    max-width: 600px;
+    margin: 5px auto 15px; /* Reduce spacing on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-img-wrapper {
+    max-width: 380px;
+  }
+
+  .hero-btn {
+    font-size: 15px;
+    padding: 12px 26px;
+  }
+}

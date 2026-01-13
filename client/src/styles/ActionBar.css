@@ -1,0 +1,27 @@
+.action-bar {
+  background: white;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.action-bar button {
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: transparent;
+  border: 2px solid orange;
+  color: orange;
+}
+
+.signup-btn {
+  background: orange;
+  color: white;
+}

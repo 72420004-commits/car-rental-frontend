@@ -1,0 +1,161 @@
+.user-dashboard-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.user-dashboard-container h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* TABLE */
+.user-bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.user-bookings-table th,
+.user-bookings-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.user-bookings-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-bookings-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* STATUS STYLES */
+.status {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.completed {
+  color: #1e88e5;
+}
+
+.status.cancelled {
+  color: #e53935;
+}
+
+.cancel-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background: #c62828;
+}
+
+.review-btn {
+  background: orange;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.review-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.review-modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 360px;
+  text-align: center;
+}
+
+.stars {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.star {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star.active {
+  color: #f5b301;
+}
+
+.review-modal textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.status.done {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+.review-btn.done {
+  background: #e0e0e0;
+  color: #555;
+  cursor: not-allowed;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .user-bookings-table thead {
+    display: none;
+  }
+
+  .user-bookings-table tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .user-bookings-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+  }
+
+  .user-bookings-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #444;
+  }
+}

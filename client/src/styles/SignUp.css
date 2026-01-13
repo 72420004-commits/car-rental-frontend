@@ -1,0 +1,204 @@
+/* ===========================
+      SIGNUP PAGE LAYOUT
+=========================== */
+
+.register-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* LEFT IMAGE */
+.left-side {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+/* RIGHT SIDE */
+.right-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  padding: 30px 20px;
+}
+
+/* BACK LINK */
+.back-link {
+  width: 100%;
+  max-width: 430px;
+  color: #ff9800;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.back-link:hover {
+  color: #e68900;
+  text-decoration: underline;
+}
+
+/* FORM CARD */
+.form-card {
+  width: 85%;
+  max-width: 430px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeUp 0.4s ease-in-out;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* TITLE */
+.form-card h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #222;
+  position: relative;
+}
+
+.form-card h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background: #ff9800;
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+
+/* INPUT FIELDS */
+.form-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-card input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.4);
+  outline: none;
+}
+
+/* SUBMIT BUTTON */
+.form-card button {
+  width: 100%;
+  padding: 13px;
+  font-size: 15px;
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-card button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffb74d, #ff9800);
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.4);
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* LOGIN LINK (INLINE) */
+/* LOGIN TEXT LINK */
+.login-link {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  margin-top: 12px;
+}
+
+.login-link span {
+  color: #ff9800;   /* Make LOGIN orange */
+  font-weight: 600;
+  margin-left: 4px;  /* Add space before Login */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-link span:hover {
+  color: #e68900;
+  text-decoration: underline;
+}
+
+/* FORCE styling for LOGIN text */
+.login-link .login-text {
+  color: #ff9800 !important;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-link .login-text:hover {
+  color: #e68900 !important;
+  text-decoration: underline;
+}
+
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side {
+    width: 100%;
+    height: 35vh;
+  }
+
+  .right-side {
+    width: 100%;
+    padding: 30px 10px;
+  }
+
+  .form-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 25px;
+  }
+
+  .form-card h2 {
+    font-size: 22px;
+  }
+
+  .form-card button {
+    padding: 11px;
+  }
+}

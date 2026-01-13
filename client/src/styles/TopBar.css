@@ -1,0 +1,46 @@
+.topbar {
+  width: 100%;
+  background-color: #1D2333;
+  color: white;
+  display: flex;
+  justify-content: space-between;   /* Space between left and right */
+  align-items: center;              /* Vertically centers items */
+  padding: 8px 60px;                /* Adds left and right breathing space */
+  font-size: 14px;
+  overflow: visible;                /* Ensures icons are not cut off */
+}
+
+/* Left side: phone and email info */
+.left-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;                         /* More spacing between phone & email */
+}
+
+.left-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;                          /* Spacing between icon and text */
+}
+
+/* Right side: social icons */
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;                         /* Space between icons */
+  font-size: 18px;                  /* Icon size */
+  padding-right: 20px;              /* Give extra space on right side */
+}
+
+/* Optional: Add hover animation for icons */
+.right-icons svg {
+    color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.right-icons svg:hover {
+  color: orange;                    /* Icon turns orange on hover */
+  transform: scale(1.15);          /* Slight zoom on hover */
+}
+

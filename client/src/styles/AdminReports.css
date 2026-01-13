@@ -1,0 +1,76 @@
+/* PAGE WRAPPER */
+.admin-reports-container {
+  padding: 30px;
+}
+
+/* TITLE */
+.admin-reports-container h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* TABLE */
+.admin-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* TABLE HEADER */
+.admin-reports-table thead {
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.admin-reports-table th,
+.admin-reports-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* BODY ROWS */
+.admin-reports-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.admin-reports-table tbody tr:hover {
+  background: #f7f7f7;
+}
+
+/* MESSAGE COLUMN */
+.admin-reports-table td:nth-child(5) {
+  max-width: 350px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* DATE */
+.admin-reports-table td:last-child {
+  white-space: nowrap;
+  font-size: 13px;
+  color: #555;
+}
+
+/* EMPTY STATE */
+.admin-reports-container p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .admin-reports-table {
+    font-size: 13px;
+  }
+
+  .admin-reports-table th,
+  .admin-reports-table td {
+    padding: 10px;
+  }
+}

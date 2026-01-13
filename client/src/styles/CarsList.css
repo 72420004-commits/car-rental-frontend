@@ -1,0 +1,189 @@
+/* ------------------------------
+   CARS LIST PAGE
+------------------------------ */
+
+.cars-container {
+  padding: 50px 5%;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* ------------------------------
+   FILTER BAR
+------------------------------ */
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.search-input,
+.filter-bar select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+/* ------------------------------
+   CARS GRID
+------------------------------ */
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ------------------------------
+   PREMIUM CARD DESIGN
+------------------------------ */
+.list-card {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 22px;
+  text-align: center;
+
+  /* ORANGE GLOW */
+  box-shadow:
+    0 0 8px rgba(255, 165, 0, 0.18),
+    0 0 20px rgba(255, 165, 0, 0.12),
+    0 0 36px rgba(255, 165, 0, 0.10);
+
+  border: 2px solid rgba(255, 165, 0, 0.22);
+
+  transition: 0.35s ease;
+}
+
+.list-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 12px rgba(255, 165, 0, 0.42),
+    0 0 30px rgba(255, 165, 0, 0.28),
+    0 0 55px rgba(255, 165, 0, 0.18);
+
+  border-color: rgba(255, 165, 0, 0.55);
+}
+
+/* IMAGE */
+.list-img-box {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f2f2f2;
+}
+
+.list-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DIVIDER */
+.list-divider {
+  width: 100%;
+  height: 1.5px;
+  background: #eee;
+  margin: 18px 0;
+}
+
+/* TITLE */
+.list-car-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+
+
+/* ------------------------------
+   PRICE BADGE
+------------------------------ */
+.list-price {
+  display: inline-block;
+  padding: 10px 24px;
+  background: white;
+  border-radius: 14px;
+  border: 2px solid #ffa500;
+
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffa500;
+
+  box-shadow: 0 3px 8px rgba(255,165,0,0.25);
+  margin-bottom: 15px;
+}
+
+.list-price span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ------------------------------
+   FEATURES GRID
+------------------------------ */
+.list-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.list-features div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.list-features svg {
+  font-size: 18px;
+  color: #ffa500;
+}
+
+/* ------------------------------
+   BOOK BUTTON
+------------------------------ */
+.list-book-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  background: #ffa500;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.list-book-btn:hover {
+  background: #e28d00;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE
+------------------------------ */
+@media (max-width: 520px) {
+  .list-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list-card {
+    padding: 18px;
+  }
+}

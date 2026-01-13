@@ -1,0 +1,111 @@
+/* ===============================
+   SLIDER SECTION
+================================ */
+.slider-container {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 70px 0;
+  overflow: hidden; /* 🔥 hides white space */
+}
+
+/* TITLE */
+.slider-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   SLIDER WRAPPER (NEW)
+================================ */
+.slider-wrapper {
+  max-width: 1200px;     /* 🔥 limits content width */
+  margin: 0 auto;        /* 🔥 centers slider */
+  overflow: hidden;      /* 🔥 hides empty space */
+}
+
+/* ===============================
+   SLIDER TRACK
+================================ */
+.slider-track {
+  display: flex;
+  gap: 28px;
+  transition: transform 0.7s ease-in-out;
+  will-change: transform;
+}
+
+/* ===============================
+   CAR CARD
+================================ */
+.car-card {
+  flex: 0 0 300px;        /* 🔥 fixed card width */
+  background-color: #f8f8f8;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+.car-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* INFO */
+.car-info {
+  padding: 18px;
+}
+
+.car-info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.car-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.car-info span {
+  font-size: 16px;
+  font-weight: bold;
+  color: orange;
+}
+
+/* BUTTON */
+.car-info button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .slider-wrapper {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    max-width: 100%;
+    padding-left: 16px;
+  }
+}

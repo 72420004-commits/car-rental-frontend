@@ -1,0 +1,136 @@
+.welcome-container {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: white;
+}
+
+/* Heading 01 */
+.welcome-number {
+  font-size: 56px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.welcome-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #22243A;
+  margin-bottom: 25px;
+}
+
+.welcome-title span {
+  color: orange;
+}
+
+/* Car Image */
+.welcome-image {
+  width: 80%;
+  max-width: 900px;
+  margin: 25px auto;
+  display: block;
+}
+
+/* Paragraph */
+.welcome-description {
+  width: 70%;
+  margin: 20px auto 50px auto;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Features */
+.welcome-features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  width: 300px;
+  padding: 25px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.feature-box i {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Colors */
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.dark {
+  background-color: #22243A;
+  color: white;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-title {
+    font-size: 36px;
+  }
+  .welcome-description {
+    width: 85%;
+    font-size: 15px;
+  }
+  .welcome-number {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 40px 5%;
+  }
+
+  .welcome-title {
+    font-size: 30px;
+  }
+
+  .welcome-number {
+    font-size: 40px;
+  }
+
+  .welcome-image {
+    width: 100%;
+  }
+
+  .welcome-description {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .feature-box {
+    width: 90%;
+  }
+
+  .welcome-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 26px;
+  }
+  .welcome-number {
+    font-size: 34px;
+  }
+  .welcome-description {
+    font-size: 13px;
+  }
+  .feature-box {
+    padding: 18px;
+  }
+}

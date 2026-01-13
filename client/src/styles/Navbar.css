@@ -1,0 +1,227 @@
+.navbar {
+  width: 100%;
+  background-color: #22243A;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Wrapper */
+.nav-container {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Center Navigation Links */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo */
+.nav-logo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.login-btn,
+.signup-btn,
+.logout-btn,
+.dashboard-btn {
+  height: 34px;
+  padding: 0 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.25s ease-in-out;
+}
+
+/* Guest Buttons */
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid orange;
+}
+
+.login-btn:hover {
+  background: orange;
+  color: white;
+}
+
+.signup-btn {
+  background: orange;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #e68a00;
+}
+
+/* Logged-in Buttons */
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.dashboard-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.dashboard-btn:hover {
+  background: #27ae60;
+}
+
+/* =========================
+   PROFILE CHIP (NEW)
+========================= */
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.nav-profile:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Avatar */
+.nav-avatar {
+  width: 34px;
+  height: 34px;
+  background: orange;
+  color: #22243A;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Name + hint */
+.nav-profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.nav-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav-profile-hint {
+  font-size: 11px;
+  color: #f1c40f;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+  display: none;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #22243A;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    gap: 18px;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-center {
+    justify-content: flex-end;
+  }
+
+  /* Scale buttons for small screens */
+  .login-btn,
+  .signup-btn,
+  .dashboard-btn,
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Hide profile chip on mobile */
+  .nav-profile {
+    display: none;
+  }
+}

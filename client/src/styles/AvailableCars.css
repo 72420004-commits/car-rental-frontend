@@ -1,0 +1,241 @@
+/* =========================
+   PAGE CONTAINER
+========================= */
+.search-page-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.85;
+}
+
+/* =========================
+   TITLE & CAPTION
+========================= */
+.website-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.website-caption {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+.search-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+  width: 85%;
+  max-width: 1100px;
+  margin-bottom: 35px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #f3f4f6;
+}
+
+.input-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 180px;
+  font-size: 14px;
+}
+
+.readonly-input {
+  background: #f8f9fa;
+  color: black;
+  cursor: not-allowed;
+}
+
+/* Search Button */
+.search-btn {
+  padding: 12px 28px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 42px;
+}
+
+.search-btn:hover {
+  background: black;
+  color: gold;
+}
+
+/* Warning text */
+.warning-text {
+  margin-top: 10px;
+  color: #ff9800;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gold;
+}
+
+.feature-icon {
+  font-size: 30px !important;
+  color: inherit;
+}
+
+/* =========================
+   PAYMENT METHODS (FEATURE)
+========================= */
+.payment-section {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.payment-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Payment cards wrapper */
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual payment card */
+.payment-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 16px 26px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+  font-size: 15px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.payment-card svg {
+  font-size: 34px;
+  color: inherit;
+}
+
+.payment-card p {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+/* Hover */
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gold;
+  border: 1px solid gold;
+  background: rgba(255, 215, 0, 0.18);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    width: 95%;
+    align-items: stretch;
+  }
+
+  .input-group input,
+  .search-btn {
+    width: 100%;
+  }
+
+  .website-title {
+    font-size: 32px;
+  }
+
+  .feature-card,
+  .payment-card {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .payment-options {
+    gap: 12px;
+  }
+}

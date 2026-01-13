@@ -13,11 +13,14 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost/car_rental_api/login.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        "https://mycarrental.xo.je/car_rental_api/login.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await res.json();
 
@@ -39,7 +42,6 @@ const Login = () => {
 
   return (
     <div className="login-container">
-
       {/* LEFT IMAGE */}
       <div
         className="left-side"
@@ -48,7 +50,6 @@ const Login = () => {
 
       {/* RIGHT SIDE */}
       <div className="right-side">
-
         {/* Back Button */}
         <p className="back-link" onClick={() => navigate("/")}>
           ← Back to Home
@@ -80,12 +81,11 @@ const Login = () => {
 
           {/* Create Account Link */}
           <div className="signup-inline">
-           <span>Don’t have an account?</span>
+            <span>Don’t have an account?</span>
             <span className="create-text" onClick={() => navigate("/signup")}>
-            Create Account
+              Create Account
             </span>
           </div>
-
         </div>
       </div>
     </div>
